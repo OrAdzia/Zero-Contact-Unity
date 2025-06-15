@@ -11,6 +11,7 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     private Vector3 originalScale;
     private Vector3 targetScale;
     private Button button;
+    private bool isHovered = false;
 
     void Start()
     {
@@ -21,7 +22,9 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     void Update()
     {
-        if (EventSystem.current.currentSelectedGameObject == gameObject)
+        bool isSelected = EventSystem.current.currentSelectedGameObject == gameObject;
+
+        if (isHovered || isSelected)
             targetScale = originalScale * selectedScale;
         else
             targetScale = originalScale;
@@ -31,11 +34,11 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        targetScale = originalScale * hoverScale;
+        isHovered = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        targetScale = originalScale;
+        isHovered = false;
     }
 }
