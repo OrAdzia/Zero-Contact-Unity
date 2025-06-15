@@ -1,5 +1,9 @@
 # Zero Contact
 
+Disclaimer:
+This project was originally inspired by a course from GameDev.tv.
+As a personal challenge, I decided to fully rebuild the project from scratch, applying what I learned to create my own version and test my understanding after completing the course.
+
 Zero Contact is a precision flying game built with Unity.  
 You pilot a rocket through dangerous obstacle courses where one mistake sends you back to the start.
 
