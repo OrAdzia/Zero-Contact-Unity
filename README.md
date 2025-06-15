@@ -21,7 +21,6 @@ You pilot a rocket through dangerous obstacle courses where one mistake sends yo
 - Universal Render Pipeline (URP)
 - Custom 3D level design
 - Unity UI system
-- 
 ---
 
 ## Controls
